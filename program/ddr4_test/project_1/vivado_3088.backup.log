@@ -1,0 +1,103 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Feb 12 01:27:33 2025
+# Process ID: 3088
+# Current directory: C:/Users/ZXB/Desktop/ddr4_test/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3884 C:\Users\ZXB\Desktop\ddr4_test\project_1\project_1.xpr
+# Log file: C:/Users/ZXB/Desktop/ddr4_test/project_1/vivado.log
+# Journal file: C:/Users/ZXB/Desktop/ddr4_test/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/ZXB/Desktop/ddr4_test_19/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado2019.2/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 927.469 ; gain = 215.688
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Feb 12 01:28:06 2025] Launched impl_1...
+Run output will be captured here: C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0003.Hub_#0003
+set_property PROGRAM.FILE {C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.bit} [get_hw_devices xcku5p_0]
+set_property PROBES.FILE {C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.ltx} [get_hw_devices xcku5p_0]
+set_property FULL_PROBES.FILE {C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.ltx} [get_hw_devices xcku5p_0]
+current_hw_device [get_hw_devices xcku5p_0]
+refresh_hw_device [lindex [get_hw_devices xcku5p_0] 0]
+INFO: [Labtools 27-2302] Device xcku5p (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+create_hw_cfgmem -hw_device [get_hw_devices xcku5p_0] -mem_dev [lindex [get_cfgmem_parts {mt25qu128-spi-x1_x2_x4}] 0]
+write_cfgmem  -format mcs -size 16 -interface SPIx4 -loadbit {up 0x00000000 "C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.bit" } -file "C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.mcs"
+Command: write_cfgmem -format mcs -size 16 -interface SPIx4 -loadbit {up 0x00000000 "C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.bit" } -file C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.mcs
+Creating config memory files...
+Creating bitstream load up from address 0x00000000
+Loading bitfile C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.bit
+Writing file C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.mcs
+Writing log file C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.prm
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x00EB75DB    Feb 12 01:29:40 2025    C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.bit
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_cfgmem completed successfully
+write_cfgmem: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2318.109 ; gain = 45.223
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/ZXB/Desktop/ddr4_test/project_1/project_1.runs/impl_1/ddr4_rw_top.mcs" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xcku5p_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xcku5p_0] 0]]; program_hw_devices [lindex [get_hw_devices xcku5p_0] 0]; refresh_hw_device [lindex [get_hw_devices xcku5p_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2318.109 ; gain = 0.000
+INFO: [Labtools 27-2302] Device xcku5p (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+Mfg ID : 20   Memory Type : bb   Memory Capacity : 18   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:18 ; elapsed = 00:11:24 . Memory (MB): peak = 2331.129 ; gain = 13.020
+endgroup
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/Port_#0003.Hub_#0003
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 12 01:44:32 2025...

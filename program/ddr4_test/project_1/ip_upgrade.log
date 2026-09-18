@@ -1,0 +1,22 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Feb 12 01:02:22 2025
+| Host         : ZXB-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku5p-ffvb676-1-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ddr4_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ddr4_0 (xilinx.com:ip:ddr4:2.2) from (Rev. 7) to (Rev. 8)
+
+2. Warnings
+-----------
+
+WARNING: INFO: upgrade from same called
+
+

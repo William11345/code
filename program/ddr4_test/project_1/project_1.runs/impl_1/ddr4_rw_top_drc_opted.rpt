@@ -1,0 +1,35 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Feb 12 21:37:54 2025
+| Host         : ZXB-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_drc -file ddr4_rw_top_drc_opted.rpt -pb ddr4_rw_top_drc_opted.pb -rpx ddr4_rw_top_drc_opted.rpx
+| Design       : ddr4_rw_top
+| Device       : xcku5p-ffvb676-1-e
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
+
+2. REPORT DETAILS
+-----------------
+

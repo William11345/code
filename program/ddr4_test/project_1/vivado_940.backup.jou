@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Feb 12 01:00:10 2025
+# Process ID: 940
+# Current directory: C:/Users/ZXB/Desktop/ddr4_test_19/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1028 C:\Users\ZXB\Desktop\ddr4_test_19\project_1\project_1.xpr
+# Log file: C:/Users/ZXB/Desktop/ddr4_test_19/project_1/vivado.log
+# Journal file: C:/Users/ZXB/Desktop/ddr4_test_19/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ZXB/Desktop/ddr4_test_19/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+upgrade_ip -srcset ddr4_0 -vlnv xilinx.com:ip:ddr4:2.2 [get_ips  ddr4_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips ddr4_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/ZXB/Desktop/ddr4_test_19/project_1/project_1.runs/impl_1/ddr4_rw_top.bit} [get_hw_devices xcku5p_0]
+set_property PROBES.FILE {C:/Users/ZXB/Desktop/ddr4_test_19/project_1/project_1.runs/impl_1/ddr4_rw_top.ltx} [get_hw_devices xcku5p_0]
+set_property FULL_PROBES.FILE {C:/Users/ZXB/Desktop/ddr4_test_19/project_1/project_1.runs/impl_1/ddr4_rw_top.ltx} [get_hw_devices xcku5p_0]
+current_hw_device [get_hw_devices xcku5p_0]
+refresh_hw_device [lindex [get_hw_devices xcku5p_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices xcku5p_0] 0] [lindex [get_cfgmem_parts {mt25qu128-spi-x1_x2_x4}] 0]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xcku5p_0] 0]]
+refresh_hw_device [lindex [get_hw_devices xcku5p_0] 0]
+set_property PROBES.FILE {C:/Users/ZXB/Desktop/ddr4_test_19/project_1/project_1.runs/impl_1/ddr4_rw_top.ltx} [get_hw_devices xcku5p_0]
+set_property FULL_PROBES.FILE {C:/Users/ZXB/Desktop/ddr4_test_19/project_1/project_1.runs/impl_1/ddr4_rw_top.ltx} [get_hw_devices xcku5p_0]
+set_property PROGRAM.FILE {C:/Users/ZXB/Desktop/ddr4_test_19/project_1/project_1.runs/impl_1/ddr4_rw_top.bit} [get_hw_devices xcku5p_0]
+program_hw_devices [get_hw_devices xcku5p_0]
+refresh_hw_device [lindex [get_hw_devices xcku5p_0] 0]

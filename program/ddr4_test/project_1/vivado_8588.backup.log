@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Feb 10 14:14:28 2025
+# Process ID: 8588
+# Current directory: C:/Users/DELL/Desktop/ddr4_test_19/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16100 C:\Users\DELL\Desktop\ddr4_test_19\project_1\project_1.xpr
+# Log file: C:/Users/DELL/Desktop/ddr4_test_19/project_1/vivado.log
+# Journal file: C:/Users/DELL/Desktop/ddr4_test_19/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/DELL/Desktop/ddr4_test_19/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/vivido2019.1_install/Vivado/2019.1/data/ip'.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 885.539 ; gain = 198.926
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Feb 10 14:16:16 2025] Launched synth_1...
+Run output will be captured here: C:/Users/DELL/Desktop/ddr4_test_19/project_1/project_1.runs/synth_1/runme.log
+[Mon Feb 10 14:16:17 2025] Launched impl_1...
+Run output will be captured here: C:/Users/DELL/Desktop/ddr4_test_19/project_1/project_1.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 10 14:33:02 2025...
